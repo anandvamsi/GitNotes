@@ -1,0 +1,104 @@
+Git
+
+In other words, it's a system that tracks changes to our project files over time. It enables us to record project changes and go back to a specific version of the tracked files, at any given point in time.  This system can be used by many people to efficiently work together and collaborate on team projects
+
+
+Working with Git
+Install Git in Linux using yum
+
+~$ git --version
+git version 2.25.1
+
+
+##Configuring git
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+
+what is meant by git and  github
+
+Repository :- containers on git
+where we save all the files.
+
+#TO create a git repository
+git init
+:- this will create a .git file
+
+
+#Git status
+git status about the repository
+
+
+Now create file index.html :- this will be untracked
+
+#Commit
+git add index.html
+git commit -m "Create index.html"
+
+
+ git commit -m "Adding index.html" index.html
+[master (root-commit) c24c45a] Adding index.html
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+
+ Now git status
+ $ git status
+On branch master
+nothing to commit, working tree clean
+
+
+Now do git log
+ ##git log
+commit c24c45a3c3a902d3dc84175bdb295ce02a427700 (HEAD -> master)
+Author: anandvamsi <anandvamsi.v@gmail.com>
+Date:   Sat Feb 13 06:30:09 2021 +0530
+
+    Adding index.html
+
+ git log will hsow the history of commits
+
+
+ ##git add .
+ :- This will add all untracked files to git
+
+
+ we can go to previous commit/changes using the commit headers
+ step 1:-
+ 	Get the commit header using the log command 
+
+ step2 :
+ 	git checkout <commit header>
+
+##Git branch
+Master is the default branch in git 
+
+git branch ::- This will show the branches
+
+##To create a new branch
+ git branch <new branch>
+
+#To get into new branch
+git checkout <new branch>
+
+##Single command :- to create a new branch and checkout the same
+git checkout -b <new branch>
+
+
+ git branch -d <branch> :- This is will delete the branch 
+
+
+
+##Git logs commands
+
+ git log --oneline
+4349b5b (HEAD -> master) q!Merge branch 'crazycolors'
+30b363d (crazycolors) modifying the content
+b85cff6 Adding the first content
+1f9137c q! Merge branch 'crazycolors'
+ff7149c Adding new
+f18f642 Adding data
+c24c45a Adding index.html
+
+
+
+
