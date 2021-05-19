@@ -1,0 +1,66 @@
+Install and configure gitlab-runner.
+--------------------------------------
+
+##what is gitlab-runner
+##Its a instance in cloud/non-cloud which will build the code pushed by gitlab server using ssh.
+
+
+Procedure
+1. Create a activation key in the Gitlab server 
+2. Install and configure gitlab-runner package in gitlab-runner machines
+
+
+Gitlab Runner
+----------------
+
+Step1
+Installing the GitLab runner
+wget https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-linux-amd64
+mv gitlab-runner-linux-amd64 /usr/bin/gitlab-runner
+
+
+[root@localhost sbin]# gitlab-runner-linux-amd64  --version
+Version:      12.3.0
+Git revision: a8a019e0
+Git branch:   12-3-stable
+GO version:   go1.8.7
+Built:        2019-09-20T08:27:24+0000
+OS/Arch:      linux/amd64
+
+
+Step2- start/stop the gitlab-runner
+useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bin/bash
+ssh-keyge
+
+[root@localhost sbin]# sudo gitlab-runner install --user=gitlab-runner --working-directory=/home/gitlab-runner
+Runtime platform                                    arch=amd64 os=linux pid=4685 revision=a8a019e0 version=12.3.0
+
+[root@localhost sbin]# gitlab-runner status
+Runtime platform                                    arch=amd64 os=linux pid=4754 revisio
+gitlab-runner: Service is running!
+
+
+Step3- Register gitlab-runner
+[root@localhost sbin]# gitlab-runner stop
+
+Login to the gitlab and select the apt project
+left side setting--->CICD--->select the runners and Expand
+scroll down a bit , Under the Section "Set up a specific Runner Manullay "
+you will be able to see  "Registration token" and copy it
+
+Back to console of gitlab runner server
+-------------------------------------------
+gitlab-runner regiter
+1.provide the URL
+2.paste the key
+3.Provide the description
+4.Provide the tags
+		comma seperated
+4.Enter the executer 
+	ssh
+
+Note:-This will ask the username,port,IP address,id_rsa of gitlab-runner server
+
+In the Gitlab, you might me seeing the activation node being active
+
+Now get ready to push the code from gitlab
