@@ -1,0 +1,57 @@
+Git
+----
+Most famous/popur version control system 
+VCS stores details the changes made to system of code,
+- changes
+- who changed
+- when and why
+
+In short with VCS we can track the Tack History and work Together
+
+we can revert back the changes.
+Without VCS we cannot have multiple multiple folders for each people and ask them to merge
+which is hard way of maintaing the code.
+
+
+Centrailized
+-------------
+Everybody depends on the central repository 
+- But if the central repository goes offline we cannot work
+
+Distributed
+------------
+Everybody have copy of the project they can work offline
+Even mercurial comes in same category
+
+But why Git.
+-----------
+- Free
+- Open source
+- SuperFast
+- Scalable
+
+More than 90% projects developed using git.
+
+
+Using Git
+---------
+commandline :- Easliest and fasted
+VScode:- Gitlens plugin.
+GitKraken is the Git GUI tool.
+sourcetree
+
+Why commandline
+- GUI tool have limitations
+- Faster and easlier.
+
+Installing git
+git --version
+
+configuring Git for the first time
+- NAME
+- EMAIL
+
+SYSTEM :- All the users
+Global :- All the repositories
+Local :- THe current repository
+
