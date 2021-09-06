@@ -55,3 +55,116 @@ SYSTEM :- All the users
 Global :- All the repositories
 Local :- THe current repository
 
+#git config --global user.name "Anand.vamsi"
+#git config --global user.email "test@gmail.com"
+#git config// default editor
+
+
+#Help for git command line 
+#git config --help
+		- git config -h
+
+###Intialize  a project
+mkdir Pro1;cd pro
+##git init
+This will create .git folder which is a hidden file.
+This will have information information regarding the git repository which will be managed by git
+if we loose this directory we gonna loose
+
+###Git work flow#######
+One side we have git folders and other side we can remote git server
+In between we have some called "stagging Area" if its all good in the stagging area then we are going to move all to remote code repostiory
+- In short if we are done with changes we move the code to stagging are if we are good we move to remote reposiotry
+- if some of changes are required then we unstage them 
+
+when we add some files
+
+
+###Example
+Adding the file
+git add file1 file2
+
+##Commiting the files
+git commit -m "Initial commit" .
+Messages are very important to understand histroy.
+
+Note Area:: Stagging area will have same changes until and unless we overwrite it .
+
+if we remove any file , we still use rm command.
+git add filename // yes its add eventhough we have deleted the file.
+
+Each commit will be having dew details
+- ID
+- Message
+- Date/time
+- Author
+- Complete Snapshot // yes But internally it compresses the file and dont store the duplicate the files.
+
+##Git status
+git status 
+will shows the files to stagging area if any // shows in the red color
+
+#Different forms of git
+#git add file1 file 
+#git add *.txt
+#git add . // will add all the files to repository , Make sure you dont have a bigger file
+
+
+Demo
+Add the files :- 
+change the content
+git status
+
+
+##Best pratices of commit
+- Never commit all the files at a time // commit often
+save file1 commit 1
+save file2 commit 2
+save file3 commit 3
+
+Note:- As you reach a state you want to record then make a commit
+
+- Meaningful commit messages.
+  - Fixed the bug #1002
+  git commit -am "Fix the bug"
+
+
+##Removing files and commit it
+rm file1.txt
+git add file1.txt
+git status
+git commit -m "removing the unwanted files"
+
+else
+git rm 
+
+
+##Remaing the files
+git mv main.js file1.js
+This will update the both the woring directory and the staging area
+
+
+#Ignoring files
+we dont igore logs and binary files.
+mkdir logs
+git status :- will show  logs in red clor
+
+to ignore the files.
+touch .gitignore
+echo "logs/" > .gitignore
+
+git add .gitignore
+git commit -m "Adding ignore"
+
+Lets real time use case of .gitignore files
+*.class
+*.log
+*.jar
+*.
+
+
+
+
+
+
+
