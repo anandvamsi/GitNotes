@@ -1,3 +1,17 @@
+
+why do we need version contril
+what is Git
+Centrailized and Distributed 
+Installing Git
+Initialize git
+git add,remove
+git status and short status
+git commit 
+Understanding .gitignore file
+git log and using --online option
+
+
+
 Git
 ----
 Most famous/popur version control system 
@@ -110,6 +124,8 @@ will shows the files to stagging area if any // shows in the red color
 #git add . // will add all the files to repository , Make sure you dont have a bigger file
 
 
+
+
 Demo
 Add the files :- 
 change the content
@@ -139,13 +155,13 @@ else
 git rm 
 
 
-##Remaing the files
+##Renamaing the files
 git mv main.js file1.js
 This will update the both the woring directory and the staging area
 
 
 #Ignoring files
-we dont igore logs and binary files.
+we  igore logs and binary files.
 mkdir logs
 git status :- will show  logs in red clor
 
@@ -162,9 +178,81 @@ Lets real time use case of .gitignore files
 *.jar
 *.
 
+##Short status
+git status -s
+
+
+##TO see difference in stagged area.
+#git diff --staged
+
+
+##Visual diff tools// Make sure you have commits
+git config --global diff.tool vscode
+
+
+To see the history of logs
+git log
+commit b0ca9e20769f613550b6cd64d2b5053026e6a562 (HEAD -> master)
+Author: anandvamsi <anandvamsi.v@gmail.com>
+Date:   Tue Sep 7 08:24:39 2021 +0530
+
+    First1 add
+
+commit 332b367f5d5dbb0f206a65c98f1e2f6cb787dbc5
+Author: anandvamsi <anandvamsi.v@gmail.com>
+Date:   Tue Sep 7 08:24:07 2021 +0530
+
+    First add
+
+ ##git log --oneline
+b0ca9e2 (HEAD -> master) First1 add
+332b367 First add
+
+#To reverse the commits ie latest commit will come on top
+##git log --oneline --reverse
+332b367 First add
+b0ca9e2 (HEAD -> master) First1 add
 
 
 
+#To get more details of commit
+git show b0ca9e2
+commit b0ca9e20769f613550b6cd64d2b5053026e6a562 (HEAD -> master)
+Author: anandvamsi <anandvamsi.v@gmail.com>
+Date:   Tue Sep 7 08:24:39 2021 +0530
+
+    First1 add
+
+diff --git a/file1.txt b/file1.txt
+index ce01362..656cabb 100644
+--- a/file1.txt
++++ b/file1.txt
+@@ -1 +1,3 @@
+-hello
++world
++data
++data1
 
 
+##Unstage the files
+Modify the content of the files
+git add files
+Now to restore the staged area
+git restore --stage file1.txt
 
+
+##To undo the files and get the copy the stagged area to local
+git restore file.txt
+This will restore the stagged copy to rewrite to the local.
+
+
+#To remove all the untracked files
+git clean -fd
+
+
+#Restore the files and recover the deleted file
+git rm file2
+git commit -m "Deleting the file"
+
+#To restore the file.
+git restore --source=HEAD~1 file2
