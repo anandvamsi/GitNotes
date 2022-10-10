@@ -1,0 +1,87 @@
+#Introduction 
+#Life without git
+#what is git and github
+#git commands
+   - git intialize
+   - git add and git commit
+   - git push
+   - git clone 
+   
+
+
+
+
+what is git 
+git is Distributed version control 
+
+SCM:- source code management
+
+first we create a MVP
+Adding new features, features are not working properly
+
+
+code keeps changing based on thre requirements and bug issues reported
+How to track when multiple developers works on same project 
+  - who made the changes
+  - what changes are made
+  - when the changes are made
+
+In order to solve this we need a version control which will record all these data.
+- git is one of them, git tracks all these changes
+     
+pre-step ::- install the git
+
+
+1. First step is convert our directory under the git control 
+   intialize
+   git init 
+
+2. we have the option to track only required files
+    configure files to track
+
+3. once you done with changes, git creates a version of the file named :- commits 
+      
+
+git status ::- will show all the untracked files in the current folder
+               intially it show all the untracked files since we did't added any files
+
+git add . :: - will add all the files to the git
+git add file1 file2 file2 :- will add those files
+
+Now execute git status :- will show respective files to be tracked
+
+whenever we modify a file , that file become unstaged , we need to stage that file by using git add <unstaged file>
+
+commit 
+git commit -m "Intial commit"
+- m indicates the message
+
+once commited it will change the version of the repository
+
+#Local and Remote repository
+local copy is named git local repository
+remote copy is named git remote repository ::- one way to host is using the open-source vesion and else we have hosted solutions like
+bitbucket,github 
+GitHub :- is the remote server which manages the git reposiotries 
+
+
+Now we are done with git init,add and commit , Inoder to push the changes we need a remote repository
+We need to create a remote reposiotry in the github/bitbucket
+
+To add the remote repository to local
+git remote add <name> <git https URL>
+git push -u <name> master
+
+#Every user have there local repository git clone/pull
+Inoder to have a local copy for a differenet user, we need to clone the repository
+git clone <URL>
+
+git pull :- will pull the latest changes to the repository
+
+
+
+
+
+
+
+
