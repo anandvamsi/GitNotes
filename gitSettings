@@ -1,0 +1,17 @@
+
+#First Generate the personal token in the github UI
+
+
+$ git config --global user.name "your_github_username" 
+$ git config --global user.email "your_github_email" 
+$ git config -l
+
+
+
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY 
+> Cloning into ... 
+$ Username for 'https://github.com' : Enter your github username 
+$ Password for 'https://github.com' : Enter your github personal access token her
+
+if you want to cache the content
+git config --global credential.helper cache
