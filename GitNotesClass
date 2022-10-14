@@ -80,8 +80,11 @@ git pull :- will pull the latest changes to the repository
 
 
 
-
-
+Git branch commands
+----------------
+git branch newone
+git checkout newone
+git push -u origin newone
 
 
 
