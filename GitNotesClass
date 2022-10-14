@@ -40,7 +40,7 @@ pre-step ::- install the git
     configure files to track
 
 3. once you done with changes, git creates a version of the file named :- commits 
-      
+   git commit is used to create a snapshot of the staged changes along a timeline of a Git projects history
 
 git status ::- will show all the untracked files in the current folder
                intially it show all the untracked files since we did't added any files
