@@ -1,0 +1,8 @@
+
+Benefits of Using gitlab CICD
+- since all the source code stays in the git, Allows keepin CI/CD and code managment in the same place
+- No need seperate tool.
+- self-Hosted or Managed application, where as in jenkins we need to have seperate server/infra for that
+    - jenkins only have self-hosting application.
+    
+    
