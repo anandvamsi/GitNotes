@@ -1,5 +1,5 @@
 
-why do we need version contril
+why do we need version control.
 what is Git
 Centrailized and Distributed 
 Installing Git
@@ -260,12 +260,18 @@ git restore --source=HEAD~1 file2
 
 
 ## Git branch commands
+ They enable developers to work on different features or 
+fixes concurrently without interfering with each other's work and provide a structured way to manage changes and organize the development proces
+```bash
 git branch :: will list all the branches
 git branch  <branch name> will create a new branch
 git checkout <branch> will switch
 git checkout -b branch
-
+```
 
 ## git merging 
+Git merge is a powerful tool for integrating changes from multiple branches, 
+enabling collaboration among team members, and maintaining a unified codebase with all the latest features and fixes
+
 git checkout master
 git merge singup
