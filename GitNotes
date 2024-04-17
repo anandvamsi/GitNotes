@@ -256,3 +256,16 @@ git commit -m "Deleting the file"
 
 #To restore the file.
 git restore --source=HEAD~1 file2
+
+
+
+## Git branch commands
+git branch :: will list all the branches
+git branch  <branch name> will create a new branch
+git checkout <branch> will switch
+git checkout -b branch
+
+
+## git merging 
+git checkout master
+git merge singup
