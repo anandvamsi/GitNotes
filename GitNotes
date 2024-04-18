@@ -275,3 +275,10 @@ enabling collaboration among team members, and maintaining a unified codebase wi
 
 git checkout master
 git merge singup
+
+
+### git clone,push,pull.
+- Create a public repo in the github and grab the URL(prefer to go ssh URL)
+- git clone <URL> will download empty repo
+
+##
